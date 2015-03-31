@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.percolatestudio.cordova.empty" version="0.2.3">
-    <name>Empty</name>
-    <description>Cordova Empty Plugin</description>
-    <js-module src="www/empty.js" name="empty">
-        <clobbers target="cordova.plugins.percolatestudio.Empty" />
-    </js-module>
-</plugin>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.percolatestudio.cordova.empty" version="0.2.3">
+    <name>Empty</name>
+    <description>Cordova Empty Plugin</description>
+    <keywords>cordova,empty</keywords>
+    <repo>https://github.com/percolatestudio/cordova-plugin-empty.git</repo>
+
+    <js-module src="www/Empty.js" name="Empty">
+        <clobbers target="cordova.plugins.percolatestudio.Empty" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Empty">
+                <param name="ios-package" value="PSEmpty" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/PSEmpty.h" />
+        <source-file src="src/ios/PSEmpty.m" />
+    </platform>
+
+     <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Empty" >
+                <param name="android-package" value="com.percolatestudio.cordova.empty.PSEmpty"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/PSEmpty.java" target-dir="src/com/percolatestudio/cordova/empty" />
+    </platform>
+
+</plugin>

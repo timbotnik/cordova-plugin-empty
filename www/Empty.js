@@ -7,7 +7,13 @@ var argscheck = require('cordova/argscheck'),
 var Empty = {
 
     doNothing: function() {
-        console.log("did nothing");
+      var success = function() {
+        console.log("successfully did nothing");
+      };
+      var error = function() {
+        console.log("failed to do nothing");
+      }
+      exec(success, error, 'Empty', 'doNothing', []);
     }
 };
 
