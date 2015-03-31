@@ -1,0 +1,1 @@
+This is a very boring empty plugin that does nothing.
